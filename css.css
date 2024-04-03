@@ -1,0 +1,82 @@
+/* ------------------------- code général pour l'écran ------------------------ */
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: url(img/_fb19dce4-cd67-4ab4-bbfd-1d5c0f5b985e.jpg) center/cover no-repeat;
+}
+
+.container{   
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* --------------------ce qui va concerner les 2 côtés ------------------------- */
+aside, main{
+    height: 100vh;
+}
+.wrapper:hover, main{
+    border-radius: 30px;
+    background: rgba(0, 0, 0, .2);
+
+    .click_me{
+        visibility: visible;
+    }
+}
+
+/* ------------------- mise en page de la partie de gauche ------------------- */
+aside{
+    text-align: center;
+    padding: 0 3rem;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    margin-top: 20vh;
+}
+.click_me{
+    margin-top: 2rem;
+    visibility: hidden;
+    font-size: 2rem;
+}
+
+/* ---------------- mise en page de la partie de droite ----------------- */
+main{
+    padding: 2rem 3rem;
+    height: 95vh;
+    width: 98%;
+    .wrapper-main{
+        height: 85%;
+        overflow: auto;
+    }
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    h2{
+        margin: 3rem 0;
+        font-size: 2.2rem;
+    }
+    details{
+        margin-bottom: 3rem;
+    }
+    summary{
+        font-style: italic;
+    }
+}
+.hidden {  /*pour jouer avec mon JS*/
+    display: none;
+    visibility: hidden; 
+  }

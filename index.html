@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css.css">
+    <title>Projet TFF VVH</title>
+</head>
+<body>
+    
+    <div class="container">
+        <aside>
+            <div class="wrapper">
+                <h2>Accord du Prof ou pas?</h2>
+                <div><i>And thank you for all the fish...</i></div>
+                <div class="click_me">42</div>
+            </div>
+        </aside>
+        <main class="hidden">
+            <h1>GUIDE DU VOYAGEUR</h1>
+            <div class="wrapper-main">
+                <h3>Points importants concernant le site pour le TFF:</h3>
+                           <details>
+                    <summary>Plusieurs remarques dont il faudra tenir compte</summary>
+                    <ul>
+                        <li>Ce sera au départ une version "light" pour quelques utilisateurs et en Europe (surtout France et Angleterre pour des raisons technico-pratiques)</li>
+                        <li>Il doit être disponible en version desktop et format app (ou pseudo-app)</li>
+                        <li>D'abord créé en local Storage et envoyable par mail pour rouvrir sur un autre browser, puis création de users avec login/password et du coup DB (mais en fin de projet ou vraiment futur) et (bien plus tard) voir si échanges entre users possibles et/ou souhaitables</li>
+                        <li>Site en 3 grosses parties (que je nommerai page dans ce briefing) :
+                            <ul>
+                                <li>Avant de partir</li>
+                                <li>Pendant le voyage</li>
+                                <li>Avant de rentrer</li>
+                                <li>On verra au développement si une quatrième partie "souvenirs" doit être faite ou si pas nécessaire car déjà générée</li>
+                            </ul>
+                        </li>
+                        <li>Voir si possible de trouver un système de traduction automatique gratuit (pour le futur)</li>
+                    </ul>
+                </details>
+                <h2>Découpage de mon journal de voyage</h2>
+                <h3>PAGE 1 : avant de partir</h3>
+                <details>
+                        <summary>Tout pour bien se préparer</summary>
+                        <h4>Les bases</h4>
+                        <ul>
+                            <li>Quand ? --> date picker pour départ et retour</li>
+                            <li>Où ?
+                                <ul>
+                                    <li>--> localisation sur carte ?</li>
+                                    <li>--> API météo pour voir le temps sur place (voir si possible météo pour la période donnée avec conseils)</li>
+                                    <li>--> si API météo "évoluée" trouvée, voir si besoin de traduction</li>
+                                </ul>
+                            </li>
+                            <li>Logement ? --> proposition avec lien vers Booking en précisant "en cas de besoin" </li>
+                            <li>Proposer un itinéraire depuis son point de départ (domicile, gare d'arrivée, terminal aéroport, etc.) jusqu'au point d'arrivée - voir pour ajouter des photos/captures qu'on aurait prise sur Streetview. Cet itinéraire sera convertible en PDF pour impression et envoyable par mail (si Pierre fait un itinéraire sur pc, il peut se l'envoyer et à moi également pour qu'on l'ait tous les 2 sur smartphone)</li>
+                            <li>Proposer des lieux d'intérêt (si API disponibles - pour Angleterre ok normalement, le reste doit être plus investigué)</li>
+                        </ul>
+                        <h4>Avant de partir</h4>
+                        <p>Plusieurs fonctionnalités proposées en différents volets. Il y aurait une barre de progression pour étape avec un bouton "suivant" pour sauter un volet. Il faudra compléter un volet pour avoir accès au suivant.</p>
+                        <p>Quand on choisit une proposition, elle va dans une tasklist. Chaque volet aura sa tasklist (sauf le tout dernier "Au moment de partir" car pas d'intérêt)</p>
+                        <ul>
+                            <li>1/ ce qu'il faut faire pour partir :
+                                <ul>
+                                    <li>Vérifier si besoin de passeport, visa, si id card encore valable et suffisamment longtemps</li>
+                                    <li>Besoin de faire des vaccins</li>
+                                    <li>Quarantaine pour animaux si pris avec</li>
+                                    <li>Garde pour les animaux s'ils restent au domicile</li>
+                                    <li>Déviation courrier (lien vers Bpost)</li>
+                                    <li>Lessive pour ce qu'on veut prendre avec soi</li>
+                                    <li>Acheter valise le cas échéant</li>
+                                    <li>Prévenir voisins et police</li>
+                                    <li>Confirmation réservations hôtel/visites/avions</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </li>
+                            <li>Ce serait une checklist susceptible d'évoluer avec des liens vers les Affaires Étrangères des pays concernés</li>
+                        </ul>
+                        <ul>
+                            <li>2/ ce qui ira dans la valise :
+                                <ul>
+                                    <li>Nécessaire couture</li>
+                                    <li>Maquillage / bijoux</li>
+                                    <li>Essuis de bain / gel douche</li>
+                                    <li>Essuis de plage / maillots</li>
+                                    <li>Pantalons / pulls / polos / tenues restaurant / tenue boîte de nuit</li>
+                                    <li>Nécessaire médical / trousse de secours / pansements</li>
+                                    <li>Brosse à dents / dentifrice</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </li>
+                            <li>Il y aura aussi quelques volets pour faire étapes par étapes (hygiène, médical, secours, habillement, draps si camping etc.) afin que le user voit la logique et puisse penser par "bloc". Il pourra également générer lui-même des items si ce qui est proposé n'est pas suffisant dans son cas.</li>
+                            <li>Tout ce qui aura été ajouté dans la valise ira donc dans une checklist de vérification MAIS AUSSI dans une checklist "avant de rentrer" pour qu'il n'oublie pas son rasoir à l'hôtel (par exemple)</li>
+                        </ul>
+                        <ul>
+                            <li>3/ Lettres :
+                                <ul>
+                                    <li>Le user pourra entrer une liste de personnes à qui il doit envoyer une carte postale, en précisant nom prénom adresse complète</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>4/ Cadeaux :
+                                <ul>
+                                        <li>Idem, le user pourra entrer une liste de personnes à qui il doit ramener un souvenir et éventuellement un commentaire sur le type de cadeau (bouteille, jouet, vêtements)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>5/ Au moment de partir
+                                <ul>
+                                    <li>Vérification frigo vide</li>
+                            <li>Tout bien éteint</li>
+                            <li>Poubelle sortie</li>
+                            <li>Vaisselle ok</li>
+                            <li>Passeport/visa/ id card/ticket avion en poche</li>
+                                </ul>
+                            </li>
+                        </ul>
+                </details>
+                <h3>PAGE 2 : sur place</h3>
+                <details>
+                    <summary>Entre visites et ce qu'il ne faut pas oublier</summary>
+                    <h4>Lieux d’intérêt :</h4>
+                        <ul>
+                            <li>Des propositions de visite auront ("normalement") été faites dans la première page. Ces propositions seront elles-aussi dans une liste (ça fait beaucoup de listes, je sais). Le user pourra leurs mettre une date et il y aura une fenêtre modale reprenant l'adresse, les horaires et tarifs du lieu d'intérêt (si API ok). Voir pour essayer de créer un genre de planning</li>
+                            <li><em>**il y aura un petit bouton gadget "j'ose le faire ou pas" - genre boule magique**</em></li>
+                            <li>Le user pourra les cocher au fur et à mesure.</li>
+                            <li>Il pourra évaluer sa satisfaction s'il le désire, et faire un mini compte rendu pour lui-même</li>
+                        </ul>
+                    <h4>Journal de bord :</h4>
+                    <ul>
+                        <li>Le user pourra faire un genre de journal par jour pour raconter ce qu'il a fait etc. Voir si ce journal pourra être envoyer par mail / postable sur Fb ou Instagram dans le futur.</li>
+                    </ul>
+                    <h4>Checklist Lettres et Cadeaux :</h4>
+                    <ul>
+                        <li>Le user verra ses checklist Lettres et Cadeaux et pourra indiquer si c'est fait (et quel cadeau - plusieurs ajouts possibles)</li>
+                        <li>Le user pourra ajouter des entrées pour des cadeaux ou courriers spontanés ou qu'il aurait oublié de mentionner avant de partir</li>
+                        <li><em>**il y aura un petit bouton gadget "j'achète ou pas" - genre boule magique**</em></li>
+                    </ul>
+                </details>
+                <h3>PAGE 3 : avant de rentrer</h3>
+                <details>
+                    <summary>Pour rentrer serein</summary>
+                    <ul>
+                        <li>Rappel de s'enregistrer pour l'avion</li>
+                        <li>retour de la checklist de ce qui a été dans la valise pour ne rien oublier</li>
+                        <li>retour de la checklist cadeaux et lettres (avec mention "pensez aussi au Duty free si besoin)</li>
+                        <li>itinéraire retour disponible</li>
+                    </ul>
+                </details>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
